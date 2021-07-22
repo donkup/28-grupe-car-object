@@ -33,7 +33,7 @@ opelis.maxDistance();
 // // Zapukas can travel 50 km.
 // opelis.canTravel(50);
 // // Opel can travel 50 km.
-// zapas.canTravel(500);
+zapas.canTravel(500);
 // // Zapukas can't travel 500 km, it has fuel only for 254 km.
 // opelis.canTravel(500);
 // // Opel can't travel 500 km, it has fuel only for 478 km.
@@ -42,7 +42,7 @@ opelis.maxDistance();
 // // Zapukas can travel 50 km, no extra fuel is needed.
 // opelis.continueTravel(50);
 // // Opel can travel 50 km, no extra fuel is needed.
-// zapas.continueTravel(500);
+zapas.continueTravel(500);
 // // Zapukas can't travel 500 km, you need 18.87 Euros for extra fuel.
-// opelis.continueTravel(500);
+opelis.continueTravel(500);
 // // Opel can't travel 500 km, you need 2.38 Euros for extra fuel.

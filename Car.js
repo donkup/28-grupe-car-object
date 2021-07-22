@@ -29,13 +29,41 @@ class Car {
         console.log(`${this.carData.brand} can travel maximum ${maxAtstumas} km.`);
 
     }
-    canTravel() {
+    canTravel(km) {
+        let atstumas = Math.round(this.carData.tank.currentSize / this.carData.fuelComsumption * 100);
+        if (km > atstumas) {
+            console.log(`${this.carData.brand} can't travel ${km} km, it has fuel only for ${atstumas} km.`);
+        }
+        else {
+            console.log(`${this.carData.brand} can travel ${km} km.`);
+        }
 
     }
+    continueTravel(km) {
+        let atstumas = Math.round(this.carData.tank.currentSize / this.carData.fuelComsumption * 100);
+        let reikPinigo = (km - atstumas) * (this.carData.fuelCostPerLitre * this.carData.fuelComsumption / 100);
+        if (km <= atstumas) {
+            console.log(`${this.carData.brand} can travel 50 km, no extra fuel is needed.`);
+        } else {
+            console.log(`${this.carData.brand} can't travel 500 km, you need ${reikPinigo.toFixed(2)} Euros for extra fuel.`);
+        }
+    }
+    // let atstumas = Math.round(this.carData.tank.currentSize / this.carData.fuelComsumption * 100);
+    // let kmKaina = Math.round(this.carData.fuelComsumption * this.carData.fuelCostPerLitre / 100);
+    // // let reikiaPinigu = 0;
+    // let reikiaPinigu = (km - atstumas) * kmKaina;
 
-
-
+    // if (atstumas <= km) {
+    //     console.log(`${this.carData.brand} can travel ${km} km, no extra fuel is needed.`);
+    // } else {
+    //     console.log(`${this.carData.brand} can't travel ${km} km, you need ${reikiaPinigu} Euros for extra fuel.`);
+    // }
 
 }
+
+
+
+
+
 
 module.exports = Car;
